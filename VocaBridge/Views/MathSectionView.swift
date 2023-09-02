@@ -9,6 +9,6 @@ import SwiftUI
 
 struct MathSectionView: View {
     var body: some View {
-        Text("Math terms will be displayed here")
+        Text("Math Section Coming Soon!")
     }
 }
