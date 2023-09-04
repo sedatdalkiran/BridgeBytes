@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E1955E52AA68C6E00762C46 /* LevelGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1955E42AA68C6E00762C46 /* LevelGroupView.swift */; };
 		6E1CC5822AA3CF1B0069519F /* VocaBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1CC5812AA3CF1B0069519F /* VocaBridgeApp.swift */; };
 		6E1CC5842AA3CF1B0069519F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1CC5832AA3CF1B0069519F /* ContentView.swift */; };
 		6E1CC5862AA3CF210069519F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1CC5852AA3CF210069519F /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E1955E42AA68C6E00762C46 /* LevelGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelGroupView.swift; sourceTree = "<group>"; };
 		6E1CC57E2AA3CF1B0069519F /* VocaBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocaBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1CC5812AA3CF1B0069519F /* VocaBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaBridgeApp.swift; sourceTree = "<group>"; };
 		6E1CC5832AA3CF1B0069519F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				6E1CC5952AA3E1B00069519F /* IELTSSectionView.swift */,
 				6E1CC5972AA3E1BE0069519F /* MathSectionView.swift */,
 				6E1CC5B92AA5459A0069519F /* WordListView.swift */,
+				6E1955E42AA68C6E00762C46 /* LevelGroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				6E1CC5B82AA53F000069519F /* IELTSWordViewModel.swift in Sources */,
 				6E1CC5A72AA3EB6E0069519F /* APIService.swift in Sources */,
 				6E1CC5B12AA53E660069519F /* Word.swift in Sources */,
+				6E1955E52AA68C6E00762C46 /* LevelGroupView.swift in Sources */,
 				6E1CC5AB2AA3EB9C0069519F /* WordGroupView.swift in Sources */,
 				6E1CC5942AA3E1160069519F /* MainSelectionView.swift in Sources */,
 			);

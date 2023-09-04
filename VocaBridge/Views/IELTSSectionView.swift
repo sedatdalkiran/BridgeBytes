@@ -15,26 +15,33 @@ struct IELTSSectionView: View {
             List {
                 ForEach(viewModel.allLevelGroups, id: \.id) { levelGroup in
                     
-                    // Progress bar for each level group
-                    ProgressView("Progress \(levelGroup.id)", value: viewModel.completedLevelsForGroup(levelGroup.id), total: Double(levelGroup.levels.count))
-                    
-                    ForEach(levelGroup.levels, id: \.id) { level in
-                        NavigationLink(destination: WordListView(level: level)) {
+                    NavigationLink(destination: LevelGroupView(levelGroup: levelGroup, viewModel: viewModel)) {
+                        VStack(alignment: .leading, spacing: 10) {
                             HStack {
-                                Text("Level \(level.id)")
+                                Image(systemName: "folder.fill")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .foregroundColor(.blue)
                                 
-                                Spacer()
-
-                                // Checkbox
-                                Image(systemName: viewModel.progress[level.id] ?? false ? "checkmark.square" : "square")
-                                    .onTapGesture {
-                                        viewModel.toggleProgress(for: level.id)
-                                    }
-                                
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.gray)
+                                Text("Group \(levelGroup.id)")
+                                    .font(.headline)
                             }
+                            
+                            // Custom Progress Bar
+                            GeometryReader { geometry in
+                                ZStack(alignment: .leading) {
+                                    Capsule()
+                                        .frame(width: geometry.size.width, height: 8)
+                                        .foregroundColor(Color.gray.opacity(0.2))
+                                    
+                                    Capsule()
+                                        .frame(width: viewModel.completedLevelsForGroup(levelGroup.id) == Double(levelGroup.levels.count) ? geometry.size.width : CGFloat((viewModel.completedLevelsForGroup(levelGroup.id) / Double(levelGroup.levels.count)) * Double(geometry.size.width - 50)), height: 8)
+                                        .foregroundColor(viewModel.completedLevelsForGroup(levelGroup.id) == Double(levelGroup.levels.count) ? .green : .red)
+                                }
+                            }
+                            .frame(height: 8)
                         }
+                        .padding(.vertical)
                     }
                 }
             }
@@ -42,4 +49,3 @@ struct IELTSSectionView: View {
         }
     }
 }
-
